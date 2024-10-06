@@ -33,3 +33,5 @@ elif (month == 1 and day >= 21) or (month == 2 and day <= 19):
     print("Водолей")
 elif (month == 2 and day >= 20) or (month == 3 and day <= 20):
     print("Рыбы")
+else:
+    print("Некорректный ввод")
