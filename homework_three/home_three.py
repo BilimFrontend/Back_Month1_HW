@@ -18,4 +18,5 @@ for letter in word.lower():
 
 percent_consonants = (consonants_count / letters) * 100
 percent_vowels = (vowels_count / letters) * 100
+
 print(f"Слово: {word}\nКоличество букв: {letters}\nСогласных букв: {consonants_count}\nГласных букв: {vowels_count}\nГласные/Согласные: {percent_vowels}%/{percent_consonants}%")
