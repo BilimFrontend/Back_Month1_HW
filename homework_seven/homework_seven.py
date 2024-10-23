@@ -13,8 +13,8 @@ mapped_num = list(map(lambda num: num ** 2 / 2, numbers_list))
 print(mapped_num)
 
 # filter
-words = ["ketchup", "tomato", "lemon", "bbq", "cucumber", "lime"]
-filtered_words = list(filter(lambda word: len(word) <= 4, words))
+words = ["ketchup", "tomato", "lemon", "bbq", "cucumber", "lime", 'coconut']
+filtered_words = list(filter(lambda word: 'c' in word, words))
 print(filtered_words)
 
 # 3
