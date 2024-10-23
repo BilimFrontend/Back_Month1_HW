@@ -31,7 +31,7 @@ def get_value_by_index (iterable=[1,2,3,4,5]):
             print(f"Элемент который находится под индексом - {index} это: {iterable[index]}")
 
         except ValueError:
-            print(f"Введите число")
+            print(f"Введите число либо введите слово 'exit' верно")
         except IndexError:
             print(f"Введите индекс от 0 до {len(iterable) - 1}")
 
