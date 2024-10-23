@@ -1,14 +1,24 @@
 # 1
 # 1.1
-def password_check (password):
-    if len(password) >= 6:
-        print(f'Ваш пароль: {password}')
-        return True
-    else:
-        print("Не надежный пароль")
-        return False
+from sys import dllhandle
 
-password_check('asd')
+
+def password_check (password):
+    symbols = '@#$%^&*()!_+=/.,<>'
+    defect_symbol = set()
+    for password_letter in password:
+        if password_letter in symbols:
+            defect_symbol.add(password_letter)
+
+    if len(password) >= 6 and not defect_symbol:
+        print(f"Ваш пароль: {password}")
+    elif defect_symbol:
+        print(f"Пароль не должен содержать: {defect_symbol}")
+    else:
+        print(f"Ваш пароль не надежный: {password}")
+
+
+password_check('123456')
 
 # 2
 # 2.1
