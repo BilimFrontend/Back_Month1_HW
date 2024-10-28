@@ -31,15 +31,24 @@ def calculator(num_one:int, operator:str, num_two:int) -> float:
 def start_code():
 
     num_and_operation = input("Калькулятор. Введите операцию: ").strip().replace(" ", "")
-    operation = str(num_and_operation[1])
+    for op in "+-*/":
+        if op in num_and_operation:
+            operator = op
+            break
 
     try:
-        num_one = int(num_and_operation[0])
-        num_two = int(num_and_operation[2])
+        num_one, num_two = map(int, num_and_operation.split(operator))
+        print(num_and_operation.split(operator))
+        # Метод split() ищет в строке символ + и использует его как разделитель
+        # В результате он разрезает строку в тех местах, где находит символ +
+        # Сам разделитель (+) удаляется,
+        # и вы получаете список, содержащий только те части строки,
+        # которые были по обе стороны от оператора — '10' и '10'.
     except ValueError:
         print("Введите только числа")
+
     else:
-        result = calculator(num_one, operation, num_two)
+        result = calculator(num_one, operator, num_two)
         if result is not None:
             print(result)
 
